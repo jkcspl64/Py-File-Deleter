@@ -62,7 +62,7 @@ def get_files_from_folder(folder: str, wildcard):
   files = ffp.src.glob(wcd)
   
   for file in files:
-    result.append( DeleteFileEntry.build(file if file.is_absolute else file.resolve()) )
+    result.append( DeleteFileEntry.build(file) )
   
   return (ffp, result)
   
