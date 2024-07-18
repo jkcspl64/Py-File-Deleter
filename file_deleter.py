@@ -38,7 +38,7 @@ def parse_args():
 def get_files_from_txt(txt_file):
   fp = pathlib.Path(txt_file)
   
-  if not fp.exists() and not fp.is_file():
+  if not fp.exists() or not fp.is_file():
     print("The input file doesn't exist or is not a file!", file=sys.stderr)
     exit(-1)
   
