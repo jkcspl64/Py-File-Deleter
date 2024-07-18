@@ -28,8 +28,8 @@ def parse_args():
   )
   folder_del.add_argument(
     "-X", "--delete-folder",
-    help="A flag to determine if the input folder will also be deleted (default: false)",
-    action="store_true", default=False
+    help="A flag to determine if the input folder will also be deleted",
+    action="store_true"
   )
   
   return parser.parse_args()
