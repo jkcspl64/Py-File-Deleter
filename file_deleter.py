@@ -59,7 +59,7 @@ def get_files_from_folder(folder: str, wildcard):
     
   result: List[DeleteFileEntry] = []
   wcd = "*" if wildcard == "ALL" else wildcard
-  files = ffp.src.glob(wcd)
+  files = [e for e in ffp.src.glob(wcd) if e.is_file()]
   
   for file in files:
     result.append( DeleteFileEntry.build(file) )

@@ -3,6 +3,8 @@ Python small utility that removes files in a given list or folder
 
 This Python 3.x CLI script was made to remove files, given either a list of their paths or a folder path containing them.
 
+The trashcan icon was taken from: https://www.vecteezy.com/vector-art/10968598-trash-can-icon
+
 ## Parameters
 
 ```
@@ -61,7 +63,7 @@ options:
 3. (Optional) Run the following command to create a binary executable:
 
    ```
-   $ pyinstaller -F file_deleter.py
+   $ pyinstaller --icon=trashcan.ico -F file_deleter.py
    ```
 
    The result will be in the `dist` directory.
